@@ -1,0 +1,59 @@
+.title
+    {
+        text-align: center;
+        color: red;
+        font-family: arial;
+
+    }
+.green
+    {
+        color: green;
+    }
+
+.larger-image{
+            width: 500px;
+            border-color: green;
+            border-width: 10px;
+            border-style: solid;
+            border-radius: 50%;  }
+
+p {
+    font-family: "Lucida Console", Courier, monospace;
+    padding: 100px 100px 0px 100px;
+    text-align: justify;
+}
+
+h1 {
+    font-family: "Lucida Console", Courier, monospace;
+}
+
+
+body {
+    <!--background-color: black-->;
+    font-family: monospace;
+    color: green;
+  }
+  .pink-text {
+    color: pink;
+  }
+  .blue-text {
+    color: blue;
+  }
+  #orange-text {
+    color: orange;
+  }
+
+footer {
+    padding: 100px 100px 0px 100px;
+}
+
+a:hover {
+    color: #000;
+    color: blue;
+  }
+  
+h2 {
+      position: relative;
+      top: 15px;
+
+  }
