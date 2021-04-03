@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+
+  <title>Beds</title>
+    <script type="text/javascript" src="insertYear.js">
+  </script>
+  <script type="text/javascript" src="jquery.js">
+  </script>
+	<script>
+		$(document).ready(function(){
+		var theYear = document.createElement( 'p' );
+		theYear.classList.add( 'the-year' );
+		theYear.textContent = 'Copyright ' + new Date().getFullYear() + ' MacaDoodle Designs';
+		document.getElementById("siteinfo").appendChild(theYear);
+	})
+  </script>
+
+  <link href="reset.css" rel="stylesheet" type="text/css" />
+  <!-- <link href="base.css" rel="stylesheet" type="text/css" /> -->
+  <!-- <link href="normalize.css" rel="stylesheet" type="text/css" /> -->
+  <link href="styles.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+  
+  </style>
+
+</head>
+
+<body id="beds">
+
+  <div id="wrap">
+    <header id="masthead">
+	<img src="images/mac_logo.jpg" width="200" height="133" alt="mac_logo" />
+	<h1>About Mac's sleeping quarters</h1>
+	</header>
+	<div class="clear"></div>
+	<nav id="mainnav">
+	<ul>
+		<li><a  class="nav-home" href="index.html">Home</a></li>
+		<li><a class="nav-about" href="about.html">About</a></li>
+		<li><a class="nav-beds" href="beds.html">Beds</a></li>
+		<li><a class="nav-toys" href="toys.html">Toys</a></li>
+		<li><a class="nav-snacks" href="snacks.html">Snacks</a></li>
+		<li><a class="nav-contact"href="contact.html">Contact</a></li>
+	</ul>
+	</nav>
+	<div id="innerwrap">
+	<p></p>
+	<h2>A good nap goes a long way...</h2>
+	<p>Below you will find a sampling of the various locations Mac has at his disposal to take a rest when needed.  The typical canine sleeps between 12 and 14 hours per day so it is crucial for Mac to have multiple places to sleep when the urge strikes.<p>
+	</div>
+	<div id="innerwrap_beds">
+			<section id="beds" class="gallery">
+				
+				<a target="_blank" href="images/bed1.jpg">
+				<img src="images/bed1.jpg" width="300" height="255" alt="mac_logo" />
+				</a>
+				<p>Mac's bedtime bed</p>
+				</section>
+				<section id="beds" class="gallery">
+				<a target="_blank" href="images/bed2.jpg">
+				<img src="images/bed2.jpg" width="300" height="255" alt="mac_logo" />
+				</a>
+				<p>Mac's afternoon snoozefest bed</p>
+				</section>
+				<section id="beds" class="gallery">
+				<a target="_blank" href="images/bed3.jpg">
+				<img src="images/bed3.jpg" width="300" height="255" alt="mac_logo" />
+				</a>
+				<p>Mac's semi sleep power nap but still ready to bark if needed bed</p>
+				</section>
+			</section>
+			<!-- End of contact section -->
+	</div>
+	<footer id="siteinfo">
+	<p></p>
+	</footer>
+  </div>
+
+
+</body>

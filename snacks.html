@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+
+  <title>Mac's Snacks!</title>
+  <script type="text/javascript" src="insertYear.js">
+  </script>
+  <script type="text/javascript" src="jquery.js">
+  </script>
+	<script>
+		$(document).ready(function(){
+		var theYear = document.createElement( 'p' );
+		theYear.classList.add( 'the-year' );
+		theYear.textContent = 'Copyright ' + new Date().getFullYear() + ' MacaDoodle Designs';
+		document.getElementById("siteinfo").appendChild(theYear);
+	})
+  </script>
+
+  <link href="reset.css" rel="stylesheet" type="text/css" />
+  <!-- <link href="base.css" rel="stylesheet" type="text/css" /> -->
+  <!-- <link href="normalize.css" rel="stylesheet" type="text/css" /> -->
+  <link href="styles.css" rel="stylesheet" type="text/css" />
+  	<script type="text/javascript">
+		var treatbag, dragging, items = [];
+		function setup(){
+			treatbag = document.getElementById('mactreat');
+			treatbag.ondragenter = preventDefault;
+			treatbag.ondragover = preventDefault;
+			treatbag.ondrop = dragDrop;
+		}
+		function dragDrop( event ){
+		addToCart(dragging, 1);
+		}
+		function dragStarted( event ){
+		dragging = event.target;
+		var dragImage = document.createElement('canvas');
+		var ctx = dragImage.getContext('2d');
+		ctx.drawImage(dragging,0,0);
+		ctx.font = 'bold 1.8em sans-serif';
+		ctx.fillText('$5', 30, 100);
+		event.dataTransfer.setDragImage(dragImage, 0, 0);
+		}
+		function preventDefault( event ){
+			event.stopPropagation();
+			event.preventDefault();
+			return false;
+		}
+		/* -Predefined Shopping Cart functionality-
+		Modifications to this section are not
+		required for this lesson */
+		 function addToCart( item,quantity ){
+		 	if(items[item.src])
+		 		items[item.src] = parseInt(items[item.src]) + quantity;
+		 	else
+		 		items[item.src] = [quantity];
+		 	redrawCart();
+		 }
+		 function redrawCart(){
+		 	var quantity = 0;
+		 	for( var i in items )
+		 		quantity += parseInt(items[i]);
+		 	var html = '<h4>Good boy Mac! (' + quantity + ')</h4>';
+		 	for( i in items )
+		 		html += '<img src="'+i+'" alt="Shopping Cart Item"/><h3>'+items[i]+'</h3>';
+		 	html += '<div>Yum Yums</div>';
+		 	treatbag.innerHTML = html;
+		 }
+	</script>
+
+  <style type="text/css">
+  
+  </style>
+
+</head>
+
+<body onload="setup()" id="snacks">
+
+  <div id="wrap"> 
+    <header id="masthead">
+	<img src="images/mac_logo.jpg" width="200" height="133" alt="mac_logo" />
+	<h1>About Mac's favorite snacks</h1>
+	</header>
+	<div class="clear"></div>
+	<nav id="mainnav">
+	<ul>
+		<li><a  class="nav-home" href="index.html">Home</a></li>
+		<li><a class="nav-about" href="about.html">About</a></li>
+		<li><a class="nav-beds" href="beds.html">Beds</a></li>
+		<li><a class="nav-toys" href="toys.html">Toys</a></li>
+		<li><a class="nav-snacks" href="snacks.html">Snacks</a></li>
+		<li><a class="nav-contact"href="contact.html">Contact</a></li>
+	</ul>
+	</nav>
+	<div id="mactreat"><h4>Give Mac a Treat</h4>
+	<p>Drag the dogbone picture over here to give Mac a treat</p>
+	</div>
+	<div id="innerwrap">
+	<!-- This is the beginning of section -->
+			<section id="snacks">
+			<p></p>
+			<h2>Snacks!!!</h2>
+			<p>
+			Although Mac pretty much eats whatever he can get his mouth on he does have some favorites and a very small list of food that he does not like.  He does not like citrus fruits.  And that is pretty much it for what he does not like.  While we try not to give Mac human food he does occasionally get to have some lettuce or watermelon which he absolutely loves.  In terms of doggy snacks he loves them all but  <a href="https://www.frostypawstreats.com/">this</a> is one of his favorites.
+			</p>
+			<section class="gallery" class="tile_list" ondragstart="dragStarted(event);">
+			<a target="_blank" href="images/treat.jpg">
+			<img src="images/treat.jpg" width="200" height="160" alt="dog treat picture" />
+			</a>
+			<section>
+			</section>
+			<!-- End of section -->
+	</div>
+	<footer id="siteinfo">
+	<p></p>
+	</footer>
+  </div>
+
+
+</body>

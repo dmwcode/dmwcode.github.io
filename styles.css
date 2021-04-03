@@ -1,59 +1,324 @@
-.title
-    {
-        text-align: center;
-        color: red;
-        font-family: arial;
-
-    }
-.green
-    {
-        color: green;
-    }
-
-.larger-image{
-            width: 500px;
-            border-color: green;
-            border-width: 10px;
-            border-style: solid;
-            border-radius: 50%;  }
-
-p {
-    font-family: "Lucida Console", Courier, monospace;
-    padding: 100px 100px 0px 100px;
-    text-align: justify;
+body {
+	font-family: "Trebuchet MS", Tahoma, Arial, sans-serif;
+	font-size:100%;
+	background-color: #A9D3FF;
 }
 
 h1 {
-    font-family: "Lucida Console", Courier, monospace;
+	font-size: 1.5em;
+	/*border: thin red solid;*/
+	line-height:1.5em;
+	font-weight: normal;
+}
+
+h2,h3, h4 {
+	font-size:1.125em;
+	/*border: thin red solid;*/
+	font-weight:lighter;
+	text-transform:uppercase;
+	letter-spacing:0.2em;
+}
+
+p {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 0.875em;
+	/*border: thin red solid;*/
+	line-height:2.00em;
+}
+
+p, h1, h2, h3, h4 {
+	margin-bottom: 20px;
+}
+
+#wrap {
+	background-color:  #F2F4FF;
+	width:  960px;
+	border:  thin solid black;
+	margin:  0 auto;
+  }
+
+#masthead {
+	background-color: #F2F4FF;
+	Setting the fs and lh so picture takes up entire div
+	font-size: 0;
+	line-height:  0;
+	padding: 2px;
+  }
+
+/*#masthead h1 {
+	font-size: 1.5em;
+	border: thin red solid;
+	line-height:1.5em;
+	font-weight: normal;
+	float:  right;
+	margin:1.5em 4em 0 0;
+}*/
+
+#masthead h1 {
+    font-size: 150%;
+    color: #666666;
+    text-align: center; 
+    display:block;
+    width: auto;
+    height: 133px; /* match image ? */
+}
+
+#masthead img {
+	float:  left;
+}
+
+#mainnav {
+	/*background-color:  #C2C895;*/
+	height:  35px;
+}
+
+nav {
+	background-color: #60668B;
+	height: 35px;
+	/*background-image: url(images/bg_nav.gif);*/
+	background-repeat: repeat-x;
+}
+
+nav li {
+	float: left;
+	width: 120px;
+	height: 35px;
+	background-color: #7D83A4;
+	text-align: center;
+	border-left: 1px black solid;
+	border-right: 1px black solid;
+	line-height: 35px;
+}
+
+nav ul li a {
+	color:#ffffff;
+	text-decoration: none;
+	display:  block;
+}
+
+nav ul li a:hover {
+	background-color:#29336b;
+	color:#F8F068;
+	display:  block;
+}
+
+#innerwrap {
+	/*background-image: url(images/inner-wrap_bg.png);*/
+	background-repeat: repeat-x;
+	/*background-color:#fff; */
+	width:  480px;
+	margin:  0 auto;
+}
+
+#innerwrap_beds {
+	/*background-image: url(images/inner-wrap_bg.png);*/
+	background-repeat: repeat-x;
+	background-color:white;
+	width:  960px;
+	margin:  0 auto;
+}
+
+section.gallery {
+	margin: 50px 0px 50px 100px;
+	border: 1px solid #ccc;
+	float: left;
+	width: 180px;
+}
+
+section.gallery:hover {
+  border: 1px solid #777;
+}
+
+section.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+section.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+#introduction-content {
+	width: 600px;
+	float: right;
+}
+
+#secondary-content {
+	float: left;
+	width: 300px;
+	/*background-image: url(images/sidebar_bg.png);*/
+	/*background-repeat: repeat-x;*/
+	background-color: #93ACB5;
+}
+
+#introduction-content p, #introduction-content h1, #introduction-content h2, #introduction-content h3, #secondary-content p, #secondary-content h2, #secondary-content h3, #about p, #about h2, #thanks, #thankscanvas, #toys, #toys p, #toys h1, #toys, #beds p, #beds h1, #snacks, #snacks p {
+	margin-left:20px;
+	margin-right:20px;
+}
+
+#thankscanvas {
+	display:none;
+	display:  inline;
+}
+
+#thanks {
+	display:none;
+	width: 100%;
+	text-align:center
+}
+
+#secondary-content img {
+	margin-left:20px;
+	margin-bottom: 10px;
+}
+
+#introduction-content h2, #secondary-content h2 {
+	margin-top:15px;
+}
+
+#siteinfo {
+	clear: both;
+	background-image: url(images/mac_f_bg.jpg);
+	background-repeat: no-repeat;
+	width: 960px;
+	height: 118px;
+	padding-top: 10px;
+	background-color:  white;
+}
+
+#siteinfo p {
+	margin: 10px 0 0 20px;
+	width:280px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size: 0.689em;
+	color:  white;
+}
+
+#about {
+	/* background-color:  #93ACB5; */
+}
+
+#about ol {
+	display: list-item;
+	list-style-type: decimal;
+	list-style-position: inside;
+	margin-left:  50px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 0.875em;
+	line-height:2.00em;
+}
+
+#video {
+	text-align:  center;
+}
+
+/*beginning of form styles*/
+
+form {
+	margin: 0 0 0 0;
+	padding: 0;
+}
+
+#contactform {
+	background:  #9AB4D7;
+	padding:  20px;
+	width:  400px;
+	border:  solid #6E3E4D 2px;
+	-webkit-border-radius:  18px;
+	-moz-border-radius:  18px;
+	border-radius:  18px;
+}
+
+#contactform fieldset {
+	margin-bottom:  20px;
+}
+
+legend {
+	color:  #384313;
+	font-size:  1em;
+	font-weight:  bold;
+	padding-bottom:  10px;
+}
+
+#contactform label {
+	float:  left;
+	font-size:  13px;
+	width:  110px;
+	margin-right:  60px;
+}
+
+#contactform label[for=yes],#contactform label[for=no] {
+	float:  none;
+}
+
+#contact h1 {
+	text-align:  center;
+}
+
+#mactreat
+{
+	float:left;
+	min-height:300px;
+	width:30%;
+	min-width:100px;
+	max-width:200px;
+	text-align:center;
+	/* background-color: #93ACB5 */
+	border:1px solid black;
+	border-width:0px 1px 1px 0px;
+}
+
+#mactreat:hover
+{
+	outline:3px dotted #000;
+}
+
+#mactreat img
+{
+	max-width:50%;
+}
+
+#mactreat h4
+{
+	margin:0;
+	padding:5px 0;
+	text-align:center;
+	color:#ffffff;
+	background-color:  #93ACB5;
 }
 
 
-body {
-    <!-- background-color: black -->;
-    font-family: monospace;
-    color: yellow;
-  }
-  .pink-text {
-    color: pink;
-  }
-  .blue-text {
-    color: blue;
-  }
-  #orange-text {
-    color: orange;
-  }
-
-footer {
-    padding: 100px 100px 0px 100px;
+#mactreat div
+{
+	margin-bottom:15px;
 }
 
-a:hover {
-    color: #000;
-    color: blue;
-  }
-  
-h2 {
-      position: relative;
-      top: 15px;
+.tile_list br
+{
+	clear:both;
+}
 
-  }
+.tile_list div
+{
+	float:left;
+	padding:5px 10px;
+	text-align:center;
+}
+
+.tile_list div:hover
+{
+	outline:2px dotted #000;
+}
+
+.tile_list div h4
+{
+	margin:0;
+	padding:0;
+}
+
+.tile_list img
+{
+	cursor:pointer;
+}
+

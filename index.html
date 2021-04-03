@@ -1,26 +1,97 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-        <link href="css\grid.css" rel="stylesheet">
-            <title>Hello:</title>
-    </head>
-    
-   <style>
-       </style>
+<head>
 
-    <body>
-        <div class="container">
-            <div class="item item1">
-               <a href=#> About Me </a>
-               <a href=#> Contact </a>
-           </div>
-        </div>
-    </body>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
 
-</html>
+  <title>Mac's Website</title>
+  <script type="text/javascript" src="insertYear.js">
+  </script>
+  <script type="text/javascript" src="jquery.js">
+  </script>
+	<script>
+		$(document).ready(function(){
+		var theYear = document.createElement( 'p' );
+		theYear.classList.add( 'the-year' );
+		theYear.textContent = 'Copyright ' + new Date().getFullYear() + ' MacaDoodle Designs';
+		document.getElementById("siteinfo").appendChild(theYear);
+	})
+  </script>
+  <script type="text/javascript">
+	function getLocation() {
+		function success(position) {
+			
+		const latitude  = position.coords.latitude;
+		const longitude = position.coords.longitude;
+		console.log(latitude);
+		console.log(longitude);
+		window.alert("Thanks, now Mac can find you at Latitude:  " + latitude + "  " + "Longitude:  " + longitude);
+	  }
+	  function error() {
+		status.textContent = 'Unable to retrieve your location';
+	  }
+
+	  if(!navigator.geolocation) {
+		status.textContent = 'Geolocation is not supported by your browser';
+	  } else {
+		status.textContent = 'Locating…';
+		navigator.geolocation.getCurrentPosition(success, error);
+	  }
+}
+</script>
+
+  <link href="reset.css" rel="stylesheet" type="text/css" />
+  <!-- <link href="base.css" rel="stylesheet" type="text/css" /> -->
+  <!-- <link href="normalize.css" rel="stylesheet" type="text/css" /> -->
+  <link href="styles.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+  
+  </style>
+
+</head>
+
+<body onload="getLocation();" id="home">
+
+  <div id="wrap">
+    <header id="masthead">
+	<img src="images/mac_logo.jpg" width="200" height="133" alt="mac_logo" />
+	<h1>Welcome to Mac the Super Schnauzer's home on the Internet</h1>
+	</header>
+	<nav id="mainnav">
+	<ul>
+		<li><a  class="nav-home" href="index.html">Home</a></li>
+		<li><a class="nav-about" href="about.html">About</a></li>
+		<li><a class="nav-beds" href="beds.html">Beds</a></li>
+		<li><a class="nav-toys" href="toys.html">Toys</a></li>
+		<li><a class="nav-snacks" href="snacks.html">Snacks</a></li>
+		<li><a class="nav-contact"href="contact.html">Contact</a></li>
+	</ul>
+	</nav>
+	<div id="innerwrap">
+	</div>
+	<aside id="secondary-content">
+	<h2>Mini Schnauzer Trivia</h2>
+	<p>You may or may not have heard about the canine breed Schnauzer.  One thing for sure if once you see them you won't have trouble recognizing them in the future.  With their distinctive features they tend to stick out in a crowd.  They have hair not fur and can be seen with a variety of haircuts.  In particular their sometimes bushy eyebrows and beard make them quite easy to distinguish.  Let's look at a few interesting facts and tidbits about the breed.
+	</p>
+	<p>Here are some interesting trivia about the Schnauzer breed that you might find interesting.  The famous Schnauzer mustache was due to their use as "ratters"as they were  originally bred by German farmers to protect the farm and chase rats.  There are three types of Schnauzers: giant, standard, and miniature.  The giant type was also a farm dog but was bred to hard and drive cattle to market.  Schnauzer is derived from the German word schnauze which translates to snout in English.  The Schnauzer is known for its distinctive snout with its mustache.
+	</p>
+	<p>
+	Looking for more information on Schnauzers?  Check out the <a href="https://en.wikipedia.org/wiki/Schnauzer">Wikipedia<a/>  page for some more facts and figures and links to other references for further reading.
+	</p>
+	</aside>
+	<section id="introduction-content">
+	<h2>Mac's Life Goals</h2>
+	<p>Hello and welcome to my web page.  My name is Mac Rooney and as you have probably noticed I am of canine descent and in particular I am a Miniature Schnauzer.  Like my human roommates I live by the motto "Keep it Simple".  My version of that is to keep each day as similar as possible, I like to eat, sleep and play.  If I can do that all day and everyday then I am one happy dog.  Feel free to check out the various parts of my site and don't hesitate to drop me some <a href="contact.html">barks</a> with how I can improve my site, improve my life, or with any questions you may have.  That is all for now I hear the mail truck coming and I need to make sure they know I am the protector of ths property!
+	</p>
+	</section>
+	<footer id="siteinfo">
+	<p></p>
+	</footer>
+  </div>
+
+
+</body>
